@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "8a600a7a-b535-4e3b-9f58-afa9ec8c8cb7",
+		"name": "Kuantaz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15629652"
+	},
+	"item": [
+		{
+			"name": "API Usuarios",
+			"item": [
+				{
+					"name": "Listar un usuario (filtro por Rut) con sus respectivos proyectos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/usuarios/rut/111111111",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios",
+								"rut",
+								"111111111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/usuarios",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar usuario por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/usuarios/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Peter\",\n    \"apellidos\": \"Pérez Rodríguez\",\n    \"rut\": \"333333333\",\n    \"fecha_nacimiento\": \"1980-03-03\",\n    \"cargo\": \"Desarrollador\",\n    \"edad\": 43\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/usuarios",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Instituciones",
+			"item": [
+				{
+					"name": "Listar una institución (Filtro por id) con sus respectivos proyectos y responsable del proyecto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/instituciones/detalle/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instituciones",
+								"detalle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todas las instituciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/instituciones",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instituciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar institucion por su id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/instituciones/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instituciones",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar instituciones con direccion google maps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/instituciones/direcciones",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instituciones",
+								"direcciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Institucion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"INITEC\",\n    \"descripcion\": \"Centro de Formación Técnica INITEC\",\n    \"direccion\": \"Las Catalpas 2480, Estación Central\",\n    \"fecha_creacion\": \"1980-03-03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/instituciones",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instituciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar una Institucion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"INITEC2\",\n    \"descripcion\": \"Centro de Formación Técnica INITEC\",\n    \"direccion\": \"Las Catalpas 2480, Estación Central\",\n    \"fecha_creacion\": \"1980-03-03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/instituciones/4",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instituciones",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar una institución",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/instituciones/4",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instituciones",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Proyectos",
+			"item": [
+				{
+					"name": "Listar los proyectos y días restantes para el término",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/proyectos/restante",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"proyectos",
+								"restante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos los proyectos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/proyectos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"proyectos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar proyecto por su id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/proyectos/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"proyectos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://127.0.0.1:5000/",
+			"type": "string"
+		}
+	]
+}
